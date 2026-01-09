@@ -1,0 +1,5 @@
+{
+  "name": "Lishogi Bot Coach YaneuraOu Engine",
+  "description": "An AI-powered Shogi coach that analyzes moves, provides personality-driven commentary, and speaks using Gemini TTS.",
+  "requestFramePermissions": []
+}

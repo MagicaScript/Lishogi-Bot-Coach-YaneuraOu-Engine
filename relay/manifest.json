@@ -1,0 +1,30 @@
+
+{
+  "manifest_version": 3,
+  "name": "Lishogi Bot Coach Relay",
+  "version": "0.1.2",
+  "description": "Relay lishogi move data to localhost coach app.",
+  "permissions": ["scripting"],
+  "host_permissions": [
+    "https://lishogi.org/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://lishogi.org/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://lishogi.org/*"],
+      "js": ["hook.js"],
+      "world": "MAIN",
+      "run_at": "document_start"
+    }
+  ],
+  "externally_connectable": {
+    "matches": ["http://localhost:3000/*"]
+  }
+}

@@ -1,0 +1,24 @@
+
+@import "tailwindcss";
+
+@theme {
+  --color-shogi-board: #eeb55e;
+  --color-shogi-piece: #f4dcb7;
+  --color-shogi-dark: #262421;
+  --color-shogi-panel: #211f1c;
+  --color-shogi-accent: #81b64c;
+}
+
+body {
+  background-color: var(--color-shogi-dark);
+  color: #e5e5e5;
+}
+
+/* Custom scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
